@@ -3,10 +3,8 @@ session_start();
 error_reporting(0);
 if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
     include "404.html";
-}else{
+}else{ ?>
 
-}
-?>
 
 <!doctype html>
 <html class="no-js" lang="">
@@ -718,3 +716,6 @@ if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
 ?>
 </body>
 </html>
+
+
+<?php } ?>
