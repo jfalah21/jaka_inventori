@@ -13,16 +13,16 @@ $r=mysqli_fetch_array($login);
 if ($ketemu >0) {
     session_start();
 
-    $_SESSION[username] =$r[username];
-    $_SESSION[nama_lengkap] =$r[nama_lengkap];
-    $_SESSION[password] =$r[password];
+    $_SESSION['username'] =$r['username'];
+    $_SESSION['nama_lengkap'] =$r['nama_lengkap'];
+    $_SESSION['password'] =$r['password'];
 
     $id_lama= session_id();
     session_regenerate_id();
     $sid_baru= session_id();
 
-echo"<script>alert('Selamat Datang $_SESSION[nama_lengkap]');
-window.location= 'content.php'<script>";
+echo "<script> alert('Selamat Datang $_SESSION[nama_lengkap]');
+window.location='content.php'<script>";
 header('location:content.php');
 }else{
     echo "<script> alert('Login Gagal')
